@@ -116,3 +116,26 @@ export const checkAuth = (req, res) => {
     res.status(500).json({ message: "Internal Server Error" });
   }
 };
+
+export const deleteAccount = async (req, res) => {
+  try {
+    console.log("🔐 deleteAccount hit — User:", req.user); // ✅ log user
+
+    const user = await User.findById(req.user._id);
+
+    if (!user) {
+      console.log("❌ User not found");
+      return res.status(404).json({ message: "User not found" });
+    }
+
+    await user.deleteOne(); // 👈 safer than remove()
+    res.clearCookie("jwt");
+    console.log("✅ User deleted");
+
+    return res.status(200).json({ message: "Account deleted successfully" });
+  } catch (error) {
+    console.error("🔥 Error in deleteAccount:", error);
+    return res.status(500).json({ message: "Internal Server Error" });
+  }
+};
+
