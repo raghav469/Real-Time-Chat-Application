@@ -4,7 +4,7 @@ A fully functional real-time chat application built using the **MERN** stack wit
 
 ---
 
-## 🚀 Features
+## 🚀 Features 
 
 - ⚙️ **Tech Stack**: MongoDB, Express, React, Node.js  
 - 🔐 **Authentication & Authorization** with **JWT**
