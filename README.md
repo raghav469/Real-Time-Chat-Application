@@ -13,7 +13,7 @@ A fully functional real-time chat application built using the **MERN** stack wit
 - ❗ **Error handling** on both client and server sides
 - ☁️ Image storage via **Cloudinary**
 - 🎨 Styled with **TailwindCSS** and **Daisy UI**
-
+ 
 ---
 
 ## 📁 Project Structure
